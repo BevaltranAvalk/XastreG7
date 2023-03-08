@@ -1,0 +1,16 @@
+Pastas novas:
+git init
+git remote add origin "{link}"
+
+Para achar o "origin"
+git remote -v
+{isso vai dar a origem do arquivo, para ser colocado no "origin"}
+
+Mandar:
+git add {arquivo a ser enviado} 
+git push origin {ramificação}
+git commit -m "{mensagem}"
+git push origin {ramificação}
+
+Puxar:
+git pull origin {Ramificação}
