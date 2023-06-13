@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Responder Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js"></script>
+</head>
+<body class="body" align="middle">
+    <h1 class="h1">Responder Quiz</h1>
+
+    <div id="quizOutput"></div>
+    <button class="button" onclick="calcularPontuacao()">Finalizar Quiz</button>
+
+    <script>
+        var request = indexedDB.open('BancoDeDados4', 1);
+
+        request.onsuccess = function(event) {
+            var db = event.target.result;
+            var transaction = db.transaction('PerguntasRespostas', 'readonly');
+            var objectStore = transaction.objectStore('PerguntasRespostas');
+
+            var getAllRequest = objectStore.getAll();
+
+            getAllRequest.onsuccess = function() {
+                var quizQuestions = getAllRequest.result;
+
+                if (quizQuestions && quizQuestions.length > 0) {
+                    var outputDiv = document.getElementById("quizOutput");
+
+                    for (var i = 0; i < quizQuestions.length; i++) {
+                        var question = quizQuestions[i];
+
+                        var questionPara = document.createElement("p");
+                        questionPara.textContent = "Pergunta " + (i + 1) + ": " + question.pergunta;
+                        outputDiv.appendChild(questionPara);
+
+                        var options = [question.respostaCorreta, question.respostaErrada1, question.respostaErrada2];
+                        shuffleArray(options);
+
+                        for (var j = 0; j < options.length; j++) {
+                            var optionPara = createOptionParagraph(options[j], "pergunta" + i);
+                            outputDiv.appendChild(optionPara);
+                        }
+                    }
+                } else {
+                    var noQuestionsPara = document.createElement("p");
+                    noQuestionsPara.textContent = "Nenhuma pergunta encontrada.";
+                    outputDiv.appendChild(noQuestionsPara);
+                }
+            };
+
+            transaction.oncomplete = function() {
+                db.close();
+            };
+        };
+
+        request.onerror = function(event) {
+            console.log('Erro ao abrir o banco de dados 4: ' + event.target.errorCode);
+        };
+
+        function createOptionParagraph(label, name) {
+            var optionPara = document.createElement("p");
+
+            var radioButton = document.createElement("input");
+            radioButton.type = "radio";
+            radioButton.name = name;
+            radioButton.value = label;
+
+            var labelElement = document.createElement("label");
+            labelElement.textContent = label;
+            labelElement.appendChild(radioButton);
+
+            optionPara.appendChild(labelElement);
+
+            return optionPara;
+        }
+
+        function calcularPontuacao() {
+            var pontuacao = 0;
+
+            var selectedAnswers = document.querySelectorAll("input[type='radio']:checked");
+
+            for (var i = 0; i < selectedAnswers.length; i++) {
+                var selectedAnswer = selectedAnswers[i];
+                var questionIndex = parseInt(selectedAnswer.name.replace("pergunta", ""));
+
+                if (selectedAnswer.value === quizQuestions[questionIndex].respostaCorreta) {
+                    pontuacao++;
+                }
+            }
+
+            var request = indexedDB.open('BancoDeDados4', 1);
+
+            request.onsuccess = function(event) {
+                var db = event.target.result;
+                var transaction = db.transaction('Pontuacoes', 'readwrite');
+                var objectStore = transaction.objectStore('Pontuacoes');
+
+                var data = {
+                    pontuacao: pontuacao
+                };
+
+                var addRequest = objectStore.add(data);
+
+                addRequest.onsuccess = function() {
+                    console.log('Pontuação adicionada com sucesso');
+                };
+
+                transaction.oncomplete = function() {
+                    db.close();
+                    exibirPontuacao(pontuacao);
+                };
+            };
+
+            request.onerror = function(event) {
+                console.log('Erro ao abrir o banco de dados 4: ' + event.target.errorCode);
+            };
+        }
+
+        function exibirPontuacao(pontuacao) {
+            var outputDiv = document.getElementById("quizOutput");
+            outputDiv.innerHTML = "";
+
+            var pontuacaoPara = document.createElement("p");
+            pontuacaoPara.textContent = "Pontuação: " + pontuacao;
+            outputDiv.appendChild(pontuacaoPara);
+        }
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    </script>
+</body>
+</html>

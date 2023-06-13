@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="text/css"
+    href="https://media.licdn.com/dms/image/C4D03AQGhme1IH1dPNw/profile-displayphoto-shrink_800_800/0/1573298945648?e=1688601600&v=beta&t=Pyjl_6Fu2sHJYF7ZQj70eS4DP6-X22mZbHQAzZ-hLYU">
+  <!--css/-->
+  <title>Área do Administrador</title>
+  <link rel="stylesheet" type="text/css" href="css/Treino.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Mycss.css">
+  <link rel="stylesheet" href="css/Myscss.scss">
+</head>
+
+<body class="back">
+  <script src="js/Treino.js"></script>
+  <script src="js/Myjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+
+  <header id="header" class="cabecario">
+    <div role="region" class="barra">
+
+      <img src="css/default1.jpg" class="profile shadow">
+
+
+      <p>
+      <div class="btn-group shadow" role="group" aria-label="Basic radio toggle button group" data-bs-toggle="collapse"
+        href="#multiCollapseExample1">
+        <input type="checkbox" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio1">Administre empresas</label>
+      </div>
+      </p>
+      <p>
+      <div class="btn-group shadow" role="group" aria-label="Basic radio toggle button group" data-bs-toggle="collapse"
+        href="#multiCollapseExample2">
+        <input type="checkbox" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">Administre Quizes</label>
+      </div>
+      </p>
+      <p>
+      <div class="btn-group shadow" role="group" aria-label="Basic radio toggle button group" data-bs-toggle="collapse"
+        href="#multiCollapseExample3">
+        <input type="checkbox" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">Administre Treinos</label>
+      </div>
+      </p>
+
+    </div>
+
+  </header>
+  <header id="header" class="cabecario3">
+    <html>
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/list.css">
+
+    </head>
+
+    <body>
+      <script src="conect3.js"></script>
+      <div id="myDIV" class="header">
+        <h2 style="margin:5px">Afazeres</h2>
+        <input class="solve" type="text" style="border: none;" id="myInput" placeholder="Descrição...">
+        <span onsubmit="newElement()" onclick="newElement()" class="addBtn">Criar</span>
+      </div>
+
+      <ul id="myUL">
+      </ul>
+
+      <script src="js/list.js"></script>
+    </body>
+
+    </html>
+
+  </header>
+  <div class="cabecario2">Página do Administrador</div>
+  <P></P>
+  <div class="container theme-showcase" role="main">
+    <div class="row" style="margin-right: 35%; margin-left:10%">
+      <div class="col">
+        <div class="collapse multi-collapse shadow" id="multiCollapseExample1">
+          <tr>
+            <div class="card card-body shadow">
+              <td>Administrar empresas</td>
+            </div>
+          </tr>
+        </div>
+        <p></p>
+        <div class="col">
+          <div class="collapse multi-collapse shadow" id="multiCollapseExample2">
+            <tr>
+              <div class="card card-body shadow">
+                <td>
+                  <html>
+
+                  <head>
+                    <link rel="stylesheet" href="css/quiz.css">
+                    <script src="js/quiz.js"></script>
+                  </head>
+
+                  <body class="body">
+                    <h1 class="h1">Criar um Quiz</h1>
+                    <div>
+                      <form id="quizForm" style="padding-left: 0px;">
+                        <label class="label">Número de perguntas:</label>
+                        <input style="width: 15%;" class="input" type="number" id="num-questions" name="num-questions"
+                          min="1" max="10" required>
+                        <button class="button" type="button" onclick="addQuestion()">Adicionar perguntas</button>
+
+                        <div id="questions"></div>
+
+                        <br>
+                      </form>
+                    </div>
+
+                    <form>
+                      <button class="button" type="button" onclick="saveQuiz()">Salvar Quiz</button>
+
+                    </form>
+
+                  </body>
+
+                  </html>
+                </td>
+              </div>
+
+          </div>
+          </tr>
+        </div>
+      </div>
+      <p></p>
+
+    </div>
+    <div class="col" style="margin-right: 35%; margin-left:10%">
+      <div class="collapse multi-collapse shadow" id="multiCollapseExample3">
+        <tr>
+          <div class="card card-body shadow">
+            <td>
+              <html>
+
+              <body>
+                <script src="conect3.js"></script>
+
+                <h1>Formulário de Treinamento</h1>
+
+                <form id="training-form">
+
+                  <label for="nome-comercial">Nome Comercial:</label>
+                  <input class="treino" type="text" id="nomecomercial" required>
+
+                  <label for="codigo-curso">Código do Curso:</label>
+                  <input class="treino" type="text" id="codigoUnico" required>
+
+                  <label for="descricao">Descrição:</label>
+                  <textarea class="treino" id="descricao" required></textarea>
+
+                  <label for="carga-horaria">Carga Horária:</label>
+                  <input class="treino" type="text" id="cargaHoraria" required>
+
+                  <label for="data-inscricao-ini">Data de Início das Inscrições:</label>
+                  <input class="treino" type="text" id="inicioIncricoes" required>
+
+                  <label for="data-inscricao-fim">Data do Fim das Inscrições:</label>
+                  <input class="treino" type="text" id="fimInscricoes" required>
+
+                  <label for="data-treinamento-ini">Data do inicio do Treinamento:</label>
+                  <input class="treino" type="text" id="inicioTreinamento" required>
+
+                  <label for="data-treinamento-fim">Data do Fim do Treinamento:</label>
+                  <input class="treino" type="text" id="fimTreinamento" required>
+
+                  <label for="min-inscritos">Quantidade Mínima de Inscritos:</label>
+                  <input class="treino" type="number" id="minInscritos" required>
+
+                  <label for="max-inscritos">Quantidade Máxima de Inscritos:</label>
+                  <input class="treino" type="number" id="maxInscritos" required>
+
+                  <button id="submeter">Enviar</button>
+
+                </form>
+              </body>
+
+              </html>
+            </td>
+          </div>
+        </tr>
+      </div>
+      <p></p>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

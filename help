@@ -1,0 +1,27 @@
+=>Comandos para o electron:
+ =node -v
+ =npm init -y
+ =npm install electron --save-dev
+ =npm start
+
+=>Comandos electron-forge
+ =npm install --save-dev @electron-forge/cli
+ =npx electron-forge import
+ =npm run make
+
+=>comandos git hub:
+ =git init => cria um arquivo .git para as devidas  postagens
+ 
+ =git remote add origin https://github.com/ BevaltranAvalk/XastreG7/ => linkagem com o   repositório
+ 
+ =git remote -v => vai mostrar se a linkagem deu certo
+ 
+ =git branch -M nome da branch => muda a branch de   postagem
+
+ =git add . => adiciona todos os arquivos que estiverem na pasta aberta no terminal
+
+ =git commit -m mensagem => o github pede uma mensagem para que seja postada uma alteração
+
+ =git push => manda a alteração para o repositório
+
+ =git push --set-upstream origin branch_que_vc_quer

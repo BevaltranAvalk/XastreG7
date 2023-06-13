@@ -1,0 +1,82 @@
+.barra{
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+}
+
+.cabecario{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    z-index: 100;
+}
+
+.cabecario2{
+ background-color: blue;
+ margin-left: 10%;
+ width: 60%;
+ height: 21vh ;
+ font-size: 20px;
+ text-align: center;
+ padding: 62px;
+ box-shadow: 0 .5rem 1rem rgb(34, 0, 170);
+}
+
+.cabecario3{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    z-index: 100;
+}
+
+#header{
+    display: block;
+    background-color: blue;
+}
+
+.middle{
+    align-content: middle;
+}
+
+.button-group{
+    display: solid;
+    justify-content: center;
+    align-items: center;
+}
+.button-group > button {
+    box-shadow: none;
+    border: 1px solid #ffffff;
+    background: #0f07f4;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttonClicked {
+    background-color: #ffffff !important;
+    color: #000000;
+}
+
+.back{
+    background-color: #0d6efd;
+}
+
+.profile{
+    width: 100%;
+    border-radius: 100px;
+    box-shadow: 0 .5rem 1rem #0802b9a7;
+}
+
+.shadow{
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0);
+}

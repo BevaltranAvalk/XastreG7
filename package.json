@@ -1,0 +1,16 @@
+{
+  "name": "projxastre",
+  "version": "1.0.0",
+  "description": "README\r Este é o README do projeto desenvolvido para administrar e acompanhar alunos e empresas parceiras em um programa de treinamento. O sistema possui uma arquitetura separada em front-end e back-end, onde o front-end é responsável pela interação com o usuário e o back-end cuida da lógica do sistema e comunicação com o front-end através de uma API.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.1.0"
+  }
+}

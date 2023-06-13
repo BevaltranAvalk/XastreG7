@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Login e Cadastro</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <table>
+    <th style="background-color: rgba(240, 255, 255, 0); 
+               padding-right:20%;">
+    </th>
+    <th style="background-color: rgba(240, 255, 255, 0);">
+      <p id="message"></p>
+    </th>
+  </table>
+
+  <table>
+    <th>
+      <div id="login-form">
+        <h2>Entrar</h2>
+        <form>
+          <label>Usuário:</label>
+          <input type="text" id="login-username" name="login-username" required>
+          <br>
+          <label>Senha:</label>
+          <input type="password" id="login-password" name="login-password" required>
+          <br><br>
+          <button type="button"   onclick="login()">Entrar</button>
+        </form>
+      </div>
+    </th>
+
+    <th style="background-color: rgba(240, 248, 255, 0);"></th>
+
+    <th>
+      <div id="signup-form">
+        <h2>Cadastrar</h2>
+        <form>
+          <label>Usuário:</label>
+          <input type="text" id="signup-username" name="signup-username" required>
+          <br>
+          <label>Senha:</label>
+          <input type="password" id="signup-password" name="signup-password" required>
+          <br>
+          <label>Confirme a senha:</label>
+          <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+          <br><br>
+          <button type="button" id="botaoCriarTabela1" onclick="signup()">Cadastrar</button>
+        </form>
+      </div>
+    </th>
+
+  </table>
+   <script src="js/conect1.js"></script>
+  <script src="js/login2.js"></script>
+ 
+</body>
+
+</html>

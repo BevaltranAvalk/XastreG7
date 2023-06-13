@@ -1,0 +1,30 @@
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #0a04aa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mid{
+    margin-left: 13vw;
+  }
