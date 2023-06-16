@@ -8,7 +8,7 @@
 .login_css {
   border-radius: 20px;
   border: 1px solid #000000;
-  background-color: #8DE4FF;
+  background-color: #c3e6f9;
   text-align: center;
   padding: 20px;
   display: inline-block;
@@ -49,3 +49,54 @@ body {
   background: fixed;
   background-color: #8ac4ff;
 }
+.curso-container,
+        .questoes-container {
+            margin-top: 20px;
+            border: 1px solid #000000;
+            padding: 20px;
+            background-color: #c3e6f9;
+            border-radius: 10px;
+        }
+        .curso-title,
+        .questoes-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .form-wrapper {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #c3e6f9; 
+            border-radius: 10px; 
+        }
+        .form-wrapper label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .form-wrapper select,
+        .form-wrapper input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+        .btn-voltar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .btn-voltar:hover {
+            background-color: #e0e0e0;
+        }
+        .mensagem {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: green;
+        }

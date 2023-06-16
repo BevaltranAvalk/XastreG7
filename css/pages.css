@@ -9,7 +9,12 @@
     display: flex;
     justify-content: center;
 }
-
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
 .admin-sidebar ul {
     display: flex;
     list-style-type: none;
@@ -49,7 +54,7 @@ body {
     color: #fff;
 }
 .fundo_opcoes {
-    background-color: #8DE4FF;
+    background-color: #c3e6f9;
     display: flex;
     justify-content: center;
     width: 800px;

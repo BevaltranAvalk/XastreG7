@@ -34,13 +34,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Quiz</title>
     <style>
+        .quiz_css {
+            background-color: #c3e6f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #000000;
+            margin: auto;
+
+        }
+        .quiz_container{
+            height: 100vh;
+            display: flex;
+        }
         .button-wrapper {
             text-align: center;
         }
+
         .button-wrapper button {
             margin: 10px;
         }
-        
     </style>
 </head>
 <body>
@@ -71,11 +84,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </form>
                     <div class="button-wrapper">
-                    <button onclick="location.href='../admin.html'">Voltar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <a href="../admin.html" class="btn-voltar">Voltar</a>
 </body>
 </html>

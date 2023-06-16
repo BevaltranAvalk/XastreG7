@@ -1,3 +1,9 @@
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
 .btn-voltar {
     position: fixed;
     bottom: 20px;
@@ -79,7 +85,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
 .fundo_opcoes a {
     display: block;
     width: 200px;

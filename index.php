@@ -73,7 +73,7 @@ if (isset($_POST["email"]) && isset($_POST["senha"])) {
     <title>Trabalho final</title>
 </head>
 <div class="login_container">
-        <a href="arquivo.txt" target="_blank">
+        <a href="read_me.txt" target="_blank">
             <img src="logo/logo.png" class="logo">
         </a>
             <div class="login_css">
