@@ -51,35 +51,53 @@ if (isset($_POST["email"]) && isset($_POST["senha"])) {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .logo {
+            max-width: 200px; /* Define a largura máxima da imagem */
+            display: block; /* Permite alinhar a imagem horizontalmente */
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+            margin-bottom: 20px; /* Define a margem inferior da imagem */
+        }
+        
+        .login_container {
+            display: flex; /* Utiliza flexbox para alinhar a logo e a caixa de login verticalmente */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            align-items: center; /* Centraliza os elementos horizontalmente */
+        }
+        
+        .login_css {
+            max-width: 400px; /* Define a largura máxima da caixa de login */
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho final</title>
 </head>
-<body>
-    <div class="login_container">
-        <div class="login_css">
-            <div class="form_wrapper">
-                <div class="entrar">
-                    <form action="" method="post">
-                        <h1>LOGIN</h1>
-                        <label style for="email" class="label">Email</label>
-                        <br>
-                        <input type="text" id="email" name="email">
-                        <br>
-                        <label for="senha" class="label">Senha</label>
-                        <br>
-                        <input type="password" id="senha" name="senha">
-                        <br>
-                        <button type="submit">ENTRAR</button>
-                    </form>
-                    <form action="php/cadastro.php">
-                    <button type="submit">CADASTRO</button>
-                    
-                    </form>
-                    <p><?php echo $message; ?></p>
+<div class="login_container">
+        <a href="arquivo.txt" target="_blank">
+            <img src="logo/logo.png" class="logo">
+        </a>
+            <div class="login_css">
+                <div class="form_wrapper">
+                    <div class="entrar">
+                        <form action="" method="post">
+                            <h1>LOGIN</h1>
+                            <label style for="email" class="label">Email</label>
+                            <br>
+                            <input type="text" id="email" name="email">
+                            <br>
+                            <label for="senha" class="label">Senha</label>
+                            <br>
+                            <input type="password" id="senha" name="senha">
+                            <br>
+                            <button type="submit">ENTRAR</button>
+                        </form>
+                        <form action="php/cadastro.php">
+                            <button type="submit">CADASTRO</button>
+                        </form>
+                        <p><?php echo $message; ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>
 </body>
 </html>
