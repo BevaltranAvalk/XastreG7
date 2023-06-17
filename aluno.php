@@ -1,9 +1,19 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION['ID']) && $_SESSION['CARGO'] == 'aluno') {
+    $alunoId = $_SESSION['ID'];
+} else {
+    header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Empresa</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>aluno</title>
+    <link rel="stylesheet" href="css/adm.css">
     <style>
         .logo {
     position: absolute;
@@ -138,18 +148,17 @@ body {
     width: 100%;
 }
     </style>
-</head>
 <body>
     <div class="admin-container">
         <img src="logo/logo.png" alt="Logo" class="logo">
-        <h1>Bem-vindo à página da Empresa</h1>
+        <h1>Bem-vindo à página do aluno</h1>
         <p style="font-size:larger">Escolha uma opção:</p>
         <div class="admin-sidebar">
             <div class="fundo_opcoes">
                 <div class="wrapper">
-                    <a href="cursos.php"><span>Atividades concluídas</span></a>
-                    <a href="testes.php"><span>Notas</span></a>
-                    <a href="vagas.php" class="active"><span>criar vagas</span></a>
+                    <a href="php/cursos.php"><span>Cursos</span></a>
+                    <a href="php/teste.php"><span>testes</span></a>
+                    <a href="vagas.php" class="active"><span> vagas</span></a>
                 </div>
             </div>
         </div>
