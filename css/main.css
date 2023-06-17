@@ -1,55 +1,55 @@
-.login_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+        .login_container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
 
-.login_css {
-  border-radius: 20px;
-  border: 1px solid #000000;
-  background-color: #c3e6f9;
-  text-align: center;
-  padding: 20px;
-  display: inline-block;
-}
+        .login_css {
+          border-radius: 20px;
+          border: 1px solid #000000;
+          background-color: #c3e6f9;
+          text-align: center;
+          padding: 20px;
+          display: inline-block;
+        }
 
-h1 {
-  font-size: 30px;
-  text-align: center;
-  color: #000000;
-}
+        h1 {
+          font-size: 30px;
+          text-align: center;
+          color: #000000;
+        }
 
-.label {
-  color: #000000;
-  font-size: 16px;
-}
+        .label {
+          color: #000000;
+          font-size: 16px;
+        }
 
-button {
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+        button {
+          align-items: center;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
 
-input {
-  margin: 10px 0;
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-}
+        input {
+          margin: 10px 0;
+          padding: 8px;
+          border-radius: 6px;
+          border: none;
+        }
 
-.form_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+        .form_wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
 
-body {
-  background: fixed;
-  background-color: #8ac4ff;
-}
-.curso-container,
+        body {
+          background: fixed;
+          background-color: #8ac4ff;
+        }
+      .curso-container,
         .questoes-container {
             margin-top: 20px;
             border: 1px solid #000000;
