@@ -1,6 +1,9 @@
 <?php
 include('connect.php');
 
+$cursoMessage = "";
+$quizMessage = "";
+
 // Excluir um curso
 if (isset($_GET['excluir_curso'])) {
     $idCurso = $_GET['excluir_curso'];
@@ -10,9 +13,9 @@ if (isset($_GET['excluir_curso'])) {
     $deleteResult = $mysqli->query($deleteQuery);
 
     if ($deleteResult) {
-        echo "Curso excluído com sucesso!";
+        $cursoMessage = "Curso excluído com sucesso!";
     } else {
-        echo "Erro ao excluir o curso: " . $mysqli->error;
+        $cursoMessage = "Erro ao excluir o curso: " . $mysqli->error;
     }
 }
 
@@ -25,9 +28,9 @@ if (isset($_GET['excluir_quiz'])) {
     $deleteResult = $mysqli->query($deleteQuery);
 
     if ($deleteResult) {
-        echo "Quiz excluído com sucesso!";
+        $quizMessage = "Quiz excluído com sucesso!";
     } else {
-        echo "Erro ao excluir o quiz: " . $mysqli->error;
+        $quizMessage = "Erro ao excluir o quiz: " . $mysqli->error;
     }
 }
 
@@ -67,6 +70,18 @@ $quizResult = $mysqli->query($quizQuery);
 <body>
     <div class="login_container">
         <div class="login_css">
+            <?php if (!empty($cursoMessage)): ?>
+                <div class="button-wrapper">
+                    <p><?php echo $cursoMessage; ?></p>
+                </div>
+            <?php endif; ?>
+
+            <?php if (!empty($quizMessage)): ?>
+                <div class="button-wrapper">
+                    <p><?php echo $quizMessage; ?></p>
+                </div>
+            <?php endif; ?>
+
             <h1>GERENCIAR</h1>
             <h2>Cursos</h2>
             <?php if ($cursoResult->num_rows > 0): ?>

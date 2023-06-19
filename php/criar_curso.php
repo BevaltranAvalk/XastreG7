@@ -1,6 +1,8 @@
 <?php
 include('connect.php');
 
+$message = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtém os valores do formulário
     $nomeComercial = $_POST["nome_comercial"];
@@ -20,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insertResult = $mysqli->query($insertQuery);
 
     if ($insertResult) {
-        echo "Curso criado com sucesso!";
+        $message = "Curso criado com sucesso!";
     } else {
         echo "Erro ao criar o curso: " . $mysqli->error;
     }
@@ -45,6 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="login_container">
         <div class="login_css">
+            <?php if (!empty($message)): ?>
+                <div class="button-wrapper">
+                    <p><?php echo $message; ?></p>
+                </div>
+            <?php endif; ?>
+
             <h1>CRIAR CURSO</h1>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <label for="nome_comercial">Nome Comercial:</label>
@@ -66,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="number" id="quantidade_maxima_inscritos" name="quantidade_maxima_inscritos" required><br>
 
                 <div class="button-wrapper">
-                            <button type="submit">Criar</button>
-                        </div>
+                    <button type="submit">Criar</button>
+                </div>
             </form>
             <div class="button-wrapper">
             </div>

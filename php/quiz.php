@@ -1,6 +1,8 @@
 <?php
 include('connect.php');
 
+$message = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se todos os campos foram preenchidos
     if(empty($_POST["questao1"])){
@@ -26,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +62,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="quiz_container">
         <div class="quiz_css">
+            <?php if (!empty($message)): ?>
+                <div class="button-wrapper">
+                    <p><?php echo $message; ?></p>
+                </div>
+            <?php endif; ?>
+
             <div class="form_wrapper">
                 <div class="criar_quiz">
                     <form action="" method="post">
