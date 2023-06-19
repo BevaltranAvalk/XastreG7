@@ -158,7 +158,7 @@ body {
                 <div class="wrapper">
                     <a href="php/cursos.php"><span>Cursos</span></a>
                     <a href="php/teste.php"><span>testes</span></a>
-                    <a href="vagas.php" class="active"><span> vagas</span></a>
+                    <a href="php/vagas.php" class="active"><span> vagas</span></a>
                 </div>
             </div>
         </div>
