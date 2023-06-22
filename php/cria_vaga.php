@@ -2,13 +2,12 @@
 session_start();
 include('connect.php');
 
-// Verifica se a empresa está logada
+// Verifica login
 if (!isset($_SESSION['ID'])) {
     header("Location: index.php");
     exit;
 }
 
-// Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obter os dados do formulário
     $titulo = $_POST['titulo'];

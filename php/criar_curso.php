@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dataFimInscricoes = $_POST["data_fim_inscricoes"];
     $quantidadeMaximaInscritos = $_POST["quantidade_maxima_inscritos"];
 
-    // Converte a carga horária para o formato TIME (HH:MM:SS)
+    // Converte a carga horária para o formato TIME do bd
     $cargaHorariaFormatada = date('H:i:s', strtotime($cargaHoraria));
 
-    // Insere os dados do curso no banco de dados
+    // Insere os dados do curso
     $insertQuery = "INSERT INTO curso (nome_comercial, descricao, carga_horaria, dat_ini, dat_fim, qtd_max)
             VALUES ('$nomeComercial', '$descricao', '$cargaHorariaFormatada', '$dataInicioInscricoes', '$dataFimInscricoes', '$quantidadeMaximaInscritos')";
 

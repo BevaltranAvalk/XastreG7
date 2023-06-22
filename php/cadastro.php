@@ -40,7 +40,7 @@ if(isset($_POST["email"]) && isset($_POST["senha"])){
                 $cargo = 'aluno';
             }
 
-            // Insere o novo usuário no banco de dados com o cargo definido
+            // Insere o novo usuário no banco de dados com o cargo
             $insertQuery = "INSERT INTO usuarios (email, senha, cargo) VALUES ('$email', '$senha', '$cargo')";
             $insertResult = $mysqli->query($insertQuery);
 

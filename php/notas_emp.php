@@ -2,7 +2,7 @@
 session_start();
 include('connect.php');
 
-// Verifica se a empresa está logada
+// Verifica o login
 if (!isset($_SESSION['ID'])) {
     header("Location: index.php");
     exit;

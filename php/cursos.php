@@ -10,7 +10,7 @@ if (!isset($_SESSION['ID'])) {
 
 $alunoId = $_SESSION['ID'];
 
-// Função para obter os cursos do banco de dados
+// Função para obter os cursos
 function getCursos()
 {
     global $mysqli, $alunoId;
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['curso_id'])) {
         $cursoId = $_POST['curso_id'];
         inscreverCurso($cursoId);
-        // Redireciona para a página de cursos ou exibe uma mensagem de sucesso
+        // Redireciona para a página de cursos
         header("Location: cursos.php?success=true");
         exit;
     }
