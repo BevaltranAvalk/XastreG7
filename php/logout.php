@@ -1,4 +1,5 @@
 <?php 
+//logout da sessão
 session_start();
 session_unset();
 session_destroy();

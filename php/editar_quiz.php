@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
 
 // Atualizar as informações do quiz
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar se todos os campos foram preenchidos
+    // Verificar se todos os campos foram preenchidos e manda mesngaem caso nao esteja
     if (empty($_POST["pergunta"]) || empty($_POST["resposta_correta"]) || empty($_POST["resposta1"]) || empty($_POST["resposta2"])) {
         echo "Preencha todos os campos.";
     } else {

@@ -2,13 +2,13 @@
 session_start();
 include('connect.php');
 
-// Verifica se o mentor está logado
+// Verifica login do mentor
 if (!isset($_SESSION['ID'])) {
     header("Location: index.php");
     exit;
 }
 
-// Função para obter as últimas notas a serem feitas
+// Obtem as últimas notas
 function getUltimasNotas()
 {
     global $mysqli;
